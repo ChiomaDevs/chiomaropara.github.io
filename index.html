@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chioma Opara | Digital Transformation & Business Solutions Consultant</title>
+    <meta name="description" content="Chioma Opara — IT Project Manager, Digital Transformation Consultant, and Business Solutions Expert. PMP® & PSPO certified. Available for freelance engagements.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ========== RESET & VARIABLES ========== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --lilac-50:  #faf5ff;
+            --lilac-100: #f3e8ff;
+            --lilac-200: #e9d5ff;
+            --lilac-300: #d8b4fe;
+            --lilac-400: #c084fc;
+            --lilac-500: #a855f7;
+            --lilac-600: #9333ea;
+            --lilac-700: #7e22ce;
+            --white:     #ffffff;
+            --gray-50:   #f9fafb;
+            --gray-100:  #f3f4f6;
+            --gray-200:  #e5e7eb;
+            --gray-600:  #4b5563;
+            --gray-700:  #374151;
+            --gray-800:  #1f2937;
+            --gray-900:  #111827;
+            --font-body: 'Inter', sans-serif;
+            --font-heading: 'Playfair Display', serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--gray-800);
+            background: var(--white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+
+        /* ========== UTILITY ========== */
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 96px 0; }
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--lilac-500);
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 20px;
+        }
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--gray-600);
+            max-width: 600px;
+        }
+
+        /* ========== NAVIGATION ========== */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-100);
+            z-index: 100;
+        }
+        .nav-inner {
+            max-width: 1120px; margin: 0 auto; padding: 0 24px;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 72px;
+        }
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+        .nav-logo span { color: var(--lilac-500); }
+        .nav-links { display: flex; gap: 32px; list-style: none; }
+        .nav-links a {
+            font-size: 0.9rem; font-weight: 500;
+            color: var(--gray-600);
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--lilac-600); }
+        .nav-cta {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 10px 24px; border-radius: 8px;
+            background: var(--lilac-600); color: var(--white);
+            font-size: 0.875rem; font-weight: 600;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover { background: var(--lilac-700); }
+
+        .hamburger {
+            display: none; flex-direction: column; gap: 5px;
+            background: none; border: none; cursor: pointer; padding: 4px;
+        }
+        .hamburger span {
+            width: 24px; height: 2px; background: var(--gray-800);
+            border-radius: 2px; transition: 0.3s;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(160deg, var(--white) 0%, var(--lilac-50) 50%, var(--lilac-100) 100%);
+            position: relative; overflow: hidden;
+        }
+        .hero::after {
+            content: ''; position: absolute; top: -120px; right: -120px;
+            width: 500px; height: 500px; border-radius: 50%;
+            background: radial-gradient(circle, var(--lilac-200) 0%, transparent 70%);
+            opacity: 0.4;
+        }
+        .hero .container { position: relative; z-index: 1; }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--white); border: 1px solid var(--lilac-200);
+            border-radius: 100px; padding: 6px 16px 6px 8px;
+            font-size: 0.8rem; font-weight: 500; color: var(--lilac-700);
+            margin-bottom: 24px;
+        }
+        .hero-badge-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: #22c55e;
+            box-shadow: 0 0 0 3px rgba(34,197,94,0.2);
+        }
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3.25rem;
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--gray-900);
+            margin-bottom: 24px;
+        }
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--lilac-500), var(--lilac-700));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-text {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            margin-bottom: 36px;
+            max-width: 500px;
+        }
+        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 32px; border-radius: 10px;
+            background: var(--lilac-600); color: var(--white);
+            font-size: 0.95rem; font-weight: 600;
+            transition: all 0.25s; border: none; cursor: pointer;
+        }
+        .btn-primary:hover { background: var(--lilac-700); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(147,51,234,0.3); }
+        .btn-outline {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 32px; border-radius: 10px;
+            background: var(--white); color: var(--lilac-700);
+            font-size: 0.95rem; font-weight: 600;
+            border: 1.5px solid var(--lilac-200);
+            transition: all 0.25s; cursor: pointer;
+        }
+        .btn-outline:hover { border-color: var(--lilac-400); background: var(--lilac-50); }
+
+        .hero-image {
+            display: flex; justify-content: center; align-items: center;
+        }
+        .hero-visual {
+            width: 360px; height: 360px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, var(--lilac-200), var(--lilac-400));
+            display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+        }
+        .hero-visual-inner {
+            font-size: 8rem;
+            opacity: 0.25;
+        }
+        .hero-stats {
+            display: flex; gap: 40px; margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--lilac-200);
+        }
+        .hero-stat-number {
+            font-family: var(--font-heading);
+            font-size: 2rem; font-weight: 700;
+            color: var(--lilac-600);
+        }
+        .hero-stat-label {
+            font-size: 0.8rem; color: var(--gray-600);
+            margin-top: 4px;
+        }
+
+        /* ========== CREDENTIALS BAR ========== */
+        .credentials {
+            background: var(--gray-900);
+            padding: 28px 0;
+        }
+        .credentials-inner {
+            display: flex; align-items: center;
+            justify-content: center; gap: 48px; flex-wrap: wrap;
+        }
+        .credential-item {
+            display: flex; align-items: center; gap: 10px;
+            color: var(--gray-200); font-size: 0.9rem; font-weight: 500;
+        }
+        .credential-icon {
+            width: 32px; height: 32px; border-radius: 8px;
+            background: rgba(168,85,247,0.15);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.75rem; font-weight: 700; color: var(--lilac-300);
+        }
+
+        /* ========== SERVICES ========== */
+        .services { background: var(--white); }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px; margin-top: 56px;
+        }
+        .service-card {
+            padding: 36px 28px;
+            border-radius: 16px;
+            border: 1px solid var(--gray-200);
+            background: var(--white);
+            transition: all 0.3s;
+            position: relative; overflow: hidden;
+        }
+        .service-card:hover {
+            border-color: var(--lilac-300);
+            box-shadow: 0 12px 40px rgba(147,51,234,0.08);
+            transform: translateY(-4px);
+        }
+        .service-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--lilac-400), var(--lilac-600));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .service-card:hover::before { opacity: 1; }
+        .service-icon {
+            width: 52px; height: 52px; border-radius: 14px;
+            background: var(--lilac-50);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem; font-weight: 600;
+            color: var(--gray-900); margin-bottom: 12px;
+        }
+        .service-card p {
+            font-size: 0.92rem; color: var(--gray-600);
+            line-height: 1.65;
+        }
+        .service-tags {
+            display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px;
+        }
+        .service-tag {
+            font-size: 0.72rem; font-weight: 500;
+            padding: 4px 12px; border-radius: 100px;
+            background: var(--lilac-50); color: var(--lilac-600);
+            border: 1px solid var(--lilac-100);
+        }
+
+        /* ========== ABOUT ========== */
+        .about { background: var(--lilac-50); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px; align-items: start; margin-top: 48px;
+        }
+        .about-text p {
+            font-size: 1rem; color: var(--gray-700);
+            margin-bottom: 20px;
+        }
+        .timeline { position: relative; padding-left: 28px; }
+        .timeline::before {
+            content: ''; position: absolute; left: 8px; top: 4px; bottom: 4px;
+            width: 2px; background: var(--lilac-200);
+        }
+        .timeline-item { margin-bottom: 28px; position: relative; }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -24px; top: 6px;
+            width: 12px; height: 12px; border-radius: 50%;
+            background: var(--lilac-400);
+            border: 3px solid var(--lilac-100);
+        }
+        .timeline-date {
+            font-size: 0.75rem; font-weight: 600;
+            color: var(--lilac-500); text-transform: uppercase;
+            letter-spacing: 0.05em; margin-bottom: 4px;
+        }
+        .timeline-role {
+            font-weight: 600; color: var(--gray-900);
+            font-size: 0.95rem; margin-bottom: 2px;
+        }
+        .timeline-company {
+            font-size: 0.85rem; color: var(--gray-600);
+        }
+
+        /* ========== RESULTS ========== */
+        .results { background: var(--white); }
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px; margin-top: 48px;
+        }
+        .result-card {
+            padding: 32px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--lilac-50), var(--white));
+            border: 1px solid var(--lilac-100);
+        }
+        .result-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem; font-weight: 600;
+            color: var(--gray-900); margin-bottom: 12px;
+        }
+        .result-card p {
+            font-size: 0.92rem; color: var(--gray-600);
+            line-height: 1.65;
+        }
+        .result-metric {
+            font-family: var(--font-heading);
+            font-size: 1.5rem; font-weight: 700;
+            color: var(--lilac-600); margin-bottom: 4px;
+        }
+
+        /* ========== CONTACT ========== */
+        .contact {
+            background: linear-gradient(160deg, var(--gray-900), #2d1b69);
+            color: var(--white);
+        }
+        .contact .section-label { color: var(--lilac-300); }
+        .contact .section-title { color: var(--white); }
+        .contact .section-subtitle { color: var(--gray-200); }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px; margin-top: 48px;
+        }
+        .contact-form { display: flex; flex-direction: column; gap: 20px; }
+        .form-group { display: flex; flex-direction: column; gap: 6px; }
+        .form-group label {
+            font-size: 0.8rem; font-weight: 500; color: var(--gray-200);
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            padding: 12px 16px; border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.06);
+            color: var(--white); font-family: var(--font-body);
+            font-size: 0.9rem; transition: border-color 0.2s;
+        }
+        .form-group input::placeholder, .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.35);
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none; border-color: var(--lilac-400);
+        }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .form-group select option { background: var(--gray-900); color: var(--white); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+        .contact-info { display: flex; flex-direction: column; gap: 28px; }
+        .contact-info-item {
+            display: flex; gap: 16px; align-items: start;
+        }
+        .contact-info-icon {
+            width: 44px; height: 44px; border-radius: 12px;
+            background: rgba(168,85,247,0.15);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; flex-shrink: 0;
+        }
+        .contact-info-label {
+            font-size: 0.8rem; color: var(--gray-200);
+            margin-bottom: 4px;
+        }
+        .contact-info-value {
+            font-size: 1rem; font-weight: 500;
+        }
+        .contact-info-value a { color: var(--lilac-300); transition: color 0.2s; }
+        .contact-info-value a:hover { color: var(--lilac-200); }
+
+        .social-links {
+            display: flex; gap: 12px; margin-top: 12px;
+        }
+        .social-link {
+            width: 44px; height: 44px; border-radius: 12px;
+            background: rgba(255,255,255,0.08);
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .social-link:hover {
+            background: var(--lilac-600);
+            border-color: var(--lilac-500);
+        }
+        .social-link svg { width: 20px; height: 20px; fill: var(--white); }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--gray-900);
+            padding: 32px 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .footer-inner {
+            display: flex; justify-content: space-between;
+            align-items: center; color: var(--gray-600);
+            font-size: 0.8rem;
+        }
+
+        /* ========== MOBILE ========== */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-cta-desktop { display: none; }
+            .hamburger { display: flex; }
+
+            .nav-links.active {
+                display: flex; flex-direction: column;
+                position: absolute; top: 72px; left: 0; right: 0;
+                background: var(--white);
+                padding: 24px; gap: 20px;
+                border-bottom: 1px solid var(--gray-200);
+                box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+            }
+
+            .hero { padding: 120px 0 64px; }
+            .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+            .hero h1 { font-size: 2.25rem; }
+            .hero-image { order: -1; }
+            .hero-visual { width: 240px; height: 240px; }
+            .hero-stats { gap: 24px; flex-wrap: wrap; }
+
+            .credentials-inner { gap: 24px; }
+
+            .services-grid { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .results-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .form-row { grid-template-columns: 1fr; }
+
+            .section-title { font-size: 1.75rem; }
+            .section { padding: 64px 0; }
+
+            .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
+        }
+
+        /* ========== ANIMATIONS ========== */
+        .fade-in {
+            opacity: 0; transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="#" class="nav-logo">Chioma<span>.</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta nav-cta-desktop">Work With Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <div>
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Available for freelance projects
+                </div>
+                <h1>I help organisations <span class="highlight">transform operations</span> through technology</h1>
+                <p class="hero-text">IT Project Manager, Digital Transformation Consultant, and Business Solutions Expert — turning complex processes into streamlined, scalable systems.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary">Start a Conversation &rarr;</a>
+                    <a href="#services" class="btn-outline">View Services</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="hero-stat-number">10+</div>
+                        <div class="hero-stat-label">Years in Tech & Business</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-number">15+</div>
+                        <div class="hero-stat-label">Modules Delivered</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-number">33+</div>
+                        <div class="hero-stat-label">Team Members Led</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-visual">
+                    <!-- Replace this div with your professional photo:
+                         <img src="your-photo.jpg" alt="Chioma Opara" style="width:100%;height:100%;object-fit:cover;border-radius:24px;"> -->
+                    <div class="hero-visual-inner">CO</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="credentials">
+    <div class="container">
+        <div class="credentials-inner">
+            <div class="credential-item">
+                <div class="credential-icon">PMP</div>
+                <span>PMP&reg; Certified</span>
+            </div>
+            <div class="credential-item">
+                <div class="credential-icon">PSPO</div>
+                <span>Professional Scrum Product Owner</span>
+            </div>
+            <div class="credential-item">
+                <div class="credential-icon">MBA</div>
+                <span>MBA, Nexford University</span>
+            </div>
+            <div class="credential-item">
+                <div class="credential-icon">M.Sc</div>
+                <span>M.Sc IT, University of Lagos</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services section" id="services">
+    <div class="container">
+        <div class="section-label">What I Do</div>
+        <h2 class="section-title">Services</h2>
+        <p class="section-subtitle">End-to-end support from strategy through execution — whether you need a consultant for a quarter or a hands-on project lead for a full engagement.</p>
+
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon">&#9881;</div>
+                <h3>Digital Transformation</h3>
+                <p>Guiding organisations from paper-based and legacy workflows to modern, automated digital systems. I assess your current state, design the roadmap, and manage the execution.</p>
+                <div class="service-tags">
+                    <span class="service-tag">Process Automation</span>
+                    <span class="service-tag">Paperless Systems</span>
+                    <span class="service-tag">Change Management</span>
+                </div>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">&#128202;</div>
+                <h3>IT Project Management</h3>
+                <p>End-to-end project leadership — from scoping and stakeholder alignment through delivery. I keep timelines tight, budgets on track, and teams focused on outcomes.</p>
+                <div class="service-tags">
+                    <span class="service-tag">Agile / Scrum</span>
+                    <span class="service-tag">Stakeholder Mgmt</span>
+                    <span class="service-tag">Risk Mitigation</span>
+                </div>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">&#128161;</div>
+                <h3>Business &amp; Product Strategy</h3>
+                <p>Translating business needs into technology solutions. I work with your team to define product vision, gather requirements, and build what matters most.</p>
+                <div class="service-tags">
+                    <span class="service-tag">Product Management</span>
+                    <span class="service-tag">Business Analysis</span>
+                    <span class="service-tag">Requirements</span>
+                </div>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">&#127891;</div>
+                <h3>Training &amp; Facilitation</h3>
+                <p>Interactive workshops and hands-on training to upskill your team in Agile practices, digital tools, and process thinking. I make complex ideas accessible.</p>
+                <div class="service-tags">
+                    <span class="service-tag">Workshops</span>
+                    <span class="service-tag">Agile Coaching</span>
+                    <span class="service-tag">L&amp;D Design</span>
+                </div>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">&#128736;</div>
+                <h3>Process Optimisation</h3>
+                <p>Mapping your existing workflows, identifying bottlenecks, and redesigning processes for speed, accuracy, and scale. Data-driven improvements, not guesswork.</p>
+                <div class="service-tags">
+                    <span class="service-tag">Workflow Design</span>
+                    <span class="service-tag">Bottleneck Analysis</span>
+                    <span class="service-tag">KPI Tracking</span>
+                </div>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">&#128640;</div>
+                <h3>Portal &amp; Module Development</h3>
+                <p>Overseeing the design, development, and launch of custom portals and software modules — from UX research to go-live, with cross-functional team coordination.</p>
+                <div class="service-tags">
+                    <span class="service-tag">Portal Design</span>
+                    <span class="service-tag">Module Delivery</span>
+                    <span class="service-tag">UAT &amp; Launch</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about section" id="about">
+    <div class="container">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">The short version</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>I'm Chioma Opara — an IT Project Manager and Digital Transformation Consultant with over a decade of experience spanning fintech, free trade zones, and enterprise operations.</p>
+                <p>Most recently, I've been leading the IT function at Lagos Free Zone (Tolaram), where I drove the shift from paper-based processes to fully digital, automated systems. I've directed the delivery of a 15-module sustainability portal, led cross-functional teams of 30+ people, and partnered across departments to turn operational bottlenecks into streamlined workflows.</p>
+                <p>Before that, I spent several years in banking — at Guaranty Trust Bank and GT Pension Managers — building products, managing channels, and ensuring quality across technology delivery.</p>
+                <p>I hold an MBA from Nexford University, a Master's in IT from the University of Lagos, and carry PMP&reg; and PSPO certifications. I bring the rare combination of strategic thinking and hands-on execution that complex projects demand.</p>
+            </div>
+            <div>
+                <h3 style="font-family:var(--font-heading);font-size:1.2rem;font-weight:600;margin-bottom:24px;color:var(--gray-900);">Career Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 &mdash; Present</div>
+                        <div class="timeline-role">IT Project Manager</div>
+                        <div class="timeline-company">Lagos Free Zone (Tolaram)</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Previous</div>
+                        <div class="timeline-role">Product Manager, Channel Payments &amp; SME Solutions</div>
+                        <div class="timeline-company">Guaranty Trust Bank</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Previous</div>
+                        <div class="timeline-role">IT QA Officer</div>
+                        <div class="timeline-company">Guaranty Trust Pension Managers</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 &mdash; 2024</div>
+                        <div class="timeline-role">MBA</div>
+                        <div class="timeline-company">Nexford University</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Earlier</div>
+                        <div class="timeline-role">M.Sc Information Technology</div>
+                        <div class="timeline-company">University of Lagos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results section" id="results">
+    <div class="container">
+        <div class="section-label">Impact</div>
+        <h2 class="section-title">What I've delivered</h2>
+        <p class="section-subtitle">A selection of outcomes from recent work. Names withheld where confidentiality applies.</p>
+
+        <div class="results-grid">
+            <div class="result-card fade-in">
+                <div class="result-metric">15 Modules</div>
+                <h3>Sustainability Portal</h3>
+                <p>Directed the full lifecycle — from requirements and UX design through development and launch — of a sustainability department portal comprising 15 integrated modules.</p>
+            </div>
+            <div class="result-card fade-in">
+                <div class="result-metric">Paper &rarr; Digital</div>
+                <h3>Enterprise-Wide Paperless Transition</h3>
+                <p>Led the organisation's shift from manual, paper-based processes to automated digital workflows across multiple business units, improving speed and reducing errors.</p>
+            </div>
+            <div class="result-card fade-in">
+                <div class="result-metric">30+ People</div>
+                <h3>Cross-Functional Team Leadership</h3>
+                <p>Built and managed a cross-functional team of developers, designers, testers, and analysts to deliver technology solutions aligned with business objectives.</p>
+            </div>
+            <div class="result-card fade-in">
+                <div class="result-metric">Optimised</div>
+                <h3>Operational Workflow Redesign</h3>
+                <p>Partnered with business units to map operational workflows, identify bottlenecks, and implement practical improvements that reduced cycle times and improved accuracy.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact section" id="contact">
+    <div class="container">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-title">Let's work together</h2>
+        <p class="section-subtitle">Have a project in mind? I'd love to hear about it. Fill out the form or reach out directly.</p>
+
+        <div class="contact-grid">
+            <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="you@company.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service of Interest</label>
+                    <select id="service">
+                        <option value="">Select a service...</option>
+                        <option value="digital-transformation">Digital Transformation</option>
+                        <option value="project-management">IT Project Management</option>
+                        <option value="product-strategy">Business & Product Strategy</option>
+                        <option value="training">Training & Facilitation</option>
+                        <option value="process-optimisation">Process Optimisation</option>
+                        <option value="portal-development">Portal & Module Development</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell me about your project</label>
+                    <textarea id="message" placeholder="What challenge are you trying to solve?" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="align-self:flex-start;">Send Message &rarr;</button>
+            </form>
+
+            <div class="contact-info">
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">&#9993;</div>
+                    <div>
+                        <div class="contact-info-label">Email</div>
+                        <div class="contact-info-value">
+                            <a href="mailto:chioma.opara@tolaram.com">chioma.opara@tolaram.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">&#127760;</div>
+                    <div>
+                        <div class="contact-info-label">Upwork</div>
+                        <div class="contact-info-value">
+                            <a href="https://www.upwork.com/freelancers/~01aafcaef935011572" target="_blank" rel="noopener">Hire me on Upwork &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">&#128101;</div>
+                    <div>
+                        <div class="contact-info-label">LinkedIn</div>
+                        <div class="contact-info-value">
+                            <a href="https://www.linkedin.com/in/chiomaropara/" target="_blank" rel="noopener">Connect on LinkedIn &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">&#128205;</div>
+                    <div>
+                        <div class="contact-info-label">Location</div>
+                        <div class="contact-info-value">Lagos, Nigeria</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="contact-info-label" style="margin-bottom:12px;">Follow me</div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/chiomaropara/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/~01aafcaef935011572" target="_blank" rel="noopener" class="social-link" aria-label="Upwork">
+                            <svg viewBox="0 0 24 24"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703 0 1.491-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <span>&copy; <span id="year"></span> Chioma Opara. All rights reserved.</span>
+            <span>Designed with purpose.</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Contact form
+    function handleSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const service = document.getElementById('service').value;
+        const message = document.getElementById('message').value;
+
+        // Build mailto link as a simple fallback
+        const subject = encodeURIComponent(`Freelance Inquiry: ${service || 'General'}`);
+        const body = encodeURIComponent(`Hi Chioma,\n\nMy name is ${name}.\n\n${message}\n\nService: ${service}\nEmail: ${email}`);
+        window.location.href = `mailto:chioma.opara@tolaram.com?subject=${subject}&body=${body}`;
+    }
+</script>
+
+</body>
+</html>
