@@ -3,480 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chioma Opara | Digital Transformation & Business Solutions Consultant</title>
-    <meta name="description" content="Chioma Opara — IT Project Manager, Digital Transformation Consultant, and Business Solutions Expert. PMP® & PSPO certified. Available for freelance engagements.">
+    <title>Chioma Opara, MBA, PMP | Digital Transformation Leader & Consultant</title>
+    <meta name="description" content="Chioma Opara — Digital Transformation Leader with 8+ years driving innovation in banking and smart infrastructure. PMP®, PSPO-I, MBA. Available for freelance engagements.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* ========== RESET & VARIABLES ========== */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
         :root {
-            --lilac-50:  #faf5ff;
-            --lilac-100: #f3e8ff;
-            --lilac-200: #e9d5ff;
-            --lilac-300: #d8b4fe;
-            --lilac-400: #c084fc;
-            --lilac-500: #a855f7;
-            --lilac-600: #9333ea;
-            --lilac-700: #7e22ce;
-            --white:     #ffffff;
-            --gray-50:   #f9fafb;
-            --gray-100:  #f3f4f6;
-            --gray-200:  #e5e7eb;
-            --gray-600:  #4b5563;
-            --gray-700:  #374151;
-            --gray-800:  #1f2937;
-            --gray-900:  #111827;
-            --font-body: 'Inter', sans-serif;
-            --font-heading: 'Playfair Display', serif;
+            --lilac-50:#faf5ff;--lilac-100:#f3e8ff;--lilac-200:#e9d5ff;--lilac-300:#d8b4fe;
+            --lilac-400:#c084fc;--lilac-500:#a855f7;--lilac-600:#9333ea;--lilac-700:#7e22ce;
+            --white:#ffffff;--gray-50:#f9fafb;--gray-100:#f3f4f6;--gray-200:#e5e7eb;
+            --gray-600:#4b5563;--gray-700:#374151;--gray-800:#1f2937;--gray-900:#111827;
+            --font-body:'Inter',sans-serif;--font-heading:'Playfair Display',serif;
         }
-
         html { scroll-behavior: smooth; }
+        body { font-family:var(--font-body);color:var(--gray-800);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased; }
+        img { max-width:100%;display:block; }
+        a { text-decoration:none;color:inherit; }
 
-        body {
-            font-family: var(--font-body);
-            color: var(--gray-800);
-            background: var(--white);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
+        .container { max-width:1120px;margin:0 auto;padding:0 24px; }
+        .section { padding:96px 0; }
+        .section-label { font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--lilac-500);margin-bottom:12px; }
+        .section-title { font-family:var(--font-heading);font-size:2.25rem;font-weight:600;color:var(--gray-900);margin-bottom:20px; }
+        .section-subtitle { font-size:1.05rem;color:var(--gray-600);max-width:640px; }
 
-        img { max-width: 100%; display: block; }
-        a { text-decoration: none; color: inherit; }
+        /* NAV */
+        .nav { position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--gray-100);z-index:100; }
+        .nav-inner { max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px; }
+        .nav-logo { font-family:var(--font-heading);font-size:1.35rem;font-weight:600;color:var(--gray-900); }
+        .nav-logo span { color:var(--lilac-500); }
+        .nav-links { display:flex;gap:28px;list-style:none; }
+        .nav-links a { font-size:0.85rem;font-weight:500;color:var(--gray-600);transition:color 0.2s; }
+        .nav-links a:hover { color:var(--lilac-600); }
+        .nav-cta { display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border-radius:8px;background:var(--lilac-600);color:var(--white);font-size:0.875rem;font-weight:600;transition:background 0.2s; }
+        .nav-cta:hover { background:var(--lilac-700); }
+        .hamburger { display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px; }
+        .hamburger span { width:24px;height:2px;background:var(--gray-800);border-radius:2px;transition:0.3s; }
 
-        /* ========== UTILITY ========== */
-        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-        .section { padding: 96px 0; }
-        .section-label {
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--lilac-500);
-            margin-bottom: 12px;
-        }
-        .section-title {
-            font-family: var(--font-heading);
-            font-size: 2.25rem;
-            font-weight: 600;
-            color: var(--gray-900);
-            margin-bottom: 20px;
-        }
-        .section-subtitle {
-            font-size: 1.05rem;
-            color: var(--gray-600);
-            max-width: 600px;
-        }
+        /* HERO */
+        .hero { padding:160px 0 100px;background:linear-gradient(160deg,var(--white) 0%,var(--lilac-50) 50%,var(--lilac-100) 100%);position:relative;overflow:hidden; }
+        .hero::after { content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,var(--lilac-200) 0%,transparent 70%);opacity:0.4; }
+        .hero .container { position:relative;z-index:1; }
+        .hero-grid { display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center; }
+        .hero-badge { display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--lilac-200);border-radius:100px;padding:6px 16px 6px 8px;font-size:0.8rem;font-weight:500;color:var(--lilac-700);margin-bottom:24px; }
+        .hero-badge-dot { width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,0.2); }
+        .hero h1 { font-family:var(--font-heading);font-size:3.1rem;font-weight:700;line-height:1.15;color:var(--gray-900);margin-bottom:24px; }
+        .hero h1 .highlight { background:linear-gradient(135deg,var(--lilac-500),var(--lilac-700));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
+        .hero-text { font-size:1.05rem;color:var(--gray-600);margin-bottom:36px;max-width:520px; }
+        .hero-actions { display:flex;gap:16px;flex-wrap:wrap; }
+        .btn-primary { display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:10px;background:var(--lilac-600);color:var(--white);font-size:0.95rem;font-weight:600;transition:all 0.25s;border:none;cursor:pointer; }
+        .btn-primary:hover { background:var(--lilac-700);transform:translateY(-1px);box-shadow:0 8px 24px rgba(147,51,234,0.3); }
+        .btn-outline { display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:10px;background:var(--white);color:var(--lilac-700);font-size:0.95rem;font-weight:600;border:1.5px solid var(--lilac-200);transition:all 0.25s;cursor:pointer; }
+        .btn-outline:hover { border-color:var(--lilac-400);background:var(--lilac-50); }
+        .hero-image { display:flex;justify-content:center;align-items:center; }
+        .hero-visual { width:360px;height:360px;border-radius:24px;background:linear-gradient(135deg,var(--lilac-200),var(--lilac-400));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden; }
+        .hero-stats { display:flex;gap:36px;margin-top:48px;padding-top:32px;border-top:1px solid var(--lilac-200); }
+        .hero-stat-number { font-family:var(--font-heading);font-size:1.85rem;font-weight:700;color:var(--lilac-600); }
+        .hero-stat-label { font-size:0.78rem;color:var(--gray-600);margin-top:4px; }
 
-        /* ========== NAVIGATION ========== */
-        .nav {
-            position: fixed; top: 0; left: 0; right: 0;
-            background: rgba(255,255,255,0.92);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--gray-100);
-            z-index: 100;
-        }
-        .nav-inner {
-            max-width: 1120px; margin: 0 auto; padding: 0 24px;
-            display: flex; align-items: center; justify-content: space-between;
-            height: 72px;
-        }
-        .nav-logo {
-            font-family: var(--font-heading);
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: var(--gray-900);
-        }
-        .nav-logo span { color: var(--lilac-500); }
-        .nav-links { display: flex; gap: 32px; list-style: none; }
-        .nav-links a {
-            font-size: 0.9rem; font-weight: 500;
-            color: var(--gray-600);
-            transition: color 0.2s;
-        }
-        .nav-links a:hover { color: var(--lilac-600); }
-        .nav-cta {
-            display: inline-flex; align-items: center; gap: 8px;
-            padding: 10px 24px; border-radius: 8px;
-            background: var(--lilac-600); color: var(--white);
-            font-size: 0.875rem; font-weight: 600;
-            transition: background 0.2s;
-        }
-        .nav-cta:hover { background: var(--lilac-700); }
+        /* CREDENTIALS */
+        .credentials { background:var(--gray-900);padding:28px 0; }
+        .credentials-inner { display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap; }
+        .credential-item { display:flex;align-items:center;gap:10px;color:var(--gray-200);font-size:0.82rem;font-weight:500; }
+        .credential-icon { width:32px;height:32px;border-radius:8px;background:rgba(168,85,247,0.15);display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:700;color:var(--lilac-300); }
 
-        .hamburger {
-            display: none; flex-direction: column; gap: 5px;
-            background: none; border: none; cursor: pointer; padding: 4px;
-        }
-        .hamburger span {
-            width: 24px; height: 2px; background: var(--gray-800);
-            border-radius: 2px; transition: 0.3s;
-        }
+        /* SERVICES */
+        .services { background:var(--white); }
+        .services-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px; }
+        .service-card { padding:36px 28px;border-radius:16px;border:1px solid var(--gray-200);background:var(--white);transition:all 0.3s;position:relative;overflow:hidden; }
+        .service-card:hover { border-color:var(--lilac-300);box-shadow:0 12px 40px rgba(147,51,234,0.08);transform:translateY(-4px); }
+        .service-card::before { content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--lilac-400),var(--lilac-600));opacity:0;transition:opacity 0.3s; }
+        .service-card:hover::before { opacity:1; }
+        .service-icon { width:52px;height:52px;border-radius:14px;background:var(--lilac-50);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px; }
+        .service-card h3 { font-family:var(--font-heading);font-size:1.2rem;font-weight:600;color:var(--gray-900);margin-bottom:12px; }
+        .service-card p { font-size:0.92rem;color:var(--gray-600);line-height:1.65; }
+        .service-tags { display:flex;flex-wrap:wrap;gap:8px;margin-top:20px; }
+        .service-tag { font-size:0.72rem;font-weight:500;padding:4px 12px;border-radius:100px;background:var(--lilac-50);color:var(--lilac-600);border:1px solid var(--lilac-100); }
 
-        /* ========== HERO ========== */
-        .hero {
-            padding: 160px 0 100px;
-            background: linear-gradient(160deg, var(--white) 0%, var(--lilac-50) 50%, var(--lilac-100) 100%);
-            position: relative; overflow: hidden;
-        }
-        .hero::after {
-            content: ''; position: absolute; top: -120px; right: -120px;
-            width: 500px; height: 500px; border-radius: 50%;
-            background: radial-gradient(circle, var(--lilac-200) 0%, transparent 70%);
-            opacity: 0.4;
-        }
-        .hero .container { position: relative; z-index: 1; }
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-        .hero-badge {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: var(--white); border: 1px solid var(--lilac-200);
-            border-radius: 100px; padding: 6px 16px 6px 8px;
-            font-size: 0.8rem; font-weight: 500; color: var(--lilac-700);
-            margin-bottom: 24px;
-        }
-        .hero-badge-dot {
-            width: 8px; height: 8px; border-radius: 50%;
-            background: #22c55e;
-            box-shadow: 0 0 0 3px rgba(34,197,94,0.2);
-        }
-        .hero h1 {
-            font-family: var(--font-heading);
-            font-size: 3.25rem;
-            font-weight: 700;
-            line-height: 1.15;
-            color: var(--gray-900);
-            margin-bottom: 24px;
-        }
-        .hero h1 .highlight {
-            background: linear-gradient(135deg, var(--lilac-500), var(--lilac-700));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .hero-text {
-            font-size: 1.1rem;
-            color: var(--gray-600);
-            margin-bottom: 36px;
-            max-width: 500px;
-        }
-        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-        .btn-primary {
-            display: inline-flex; align-items: center; gap: 8px;
-            padding: 14px 32px; border-radius: 10px;
-            background: var(--lilac-600); color: var(--white);
-            font-size: 0.95rem; font-weight: 600;
-            transition: all 0.25s; border: none; cursor: pointer;
-        }
-        .btn-primary:hover { background: var(--lilac-700); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(147,51,234,0.3); }
-        .btn-outline {
-            display: inline-flex; align-items: center; gap: 8px;
-            padding: 14px 32px; border-radius: 10px;
-            background: var(--white); color: var(--lilac-700);
-            font-size: 0.95rem; font-weight: 600;
-            border: 1.5px solid var(--lilac-200);
-            transition: all 0.25s; cursor: pointer;
-        }
-        .btn-outline:hover { border-color: var(--lilac-400); background: var(--lilac-50); }
+        /* ABOUT */
+        .about { background:var(--lilac-50); }
+        .about-grid { display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:48px; }
+        .about-text p { font-size:1rem;color:var(--gray-700);margin-bottom:20px; }
 
-        .hero-image {
-            display: flex; justify-content: center; align-items: center;
-        }
-        .hero-visual {
-            width: 360px; height: 360px;
-            border-radius: 24px;
-            background: linear-gradient(135deg, var(--lilac-200), var(--lilac-400));
-            display: flex; align-items: center; justify-content: center;
-            position: relative; overflow: hidden;
-        }
-        .hero-visual-inner {
-            font-size: 8rem;
-            opacity: 0.25;
-        }
-        .hero-stats {
-            display: flex; gap: 40px; margin-top: 48px;
-            padding-top: 32px;
-            border-top: 1px solid var(--lilac-200);
-        }
-        .hero-stat-number {
-            font-family: var(--font-heading);
-            font-size: 2rem; font-weight: 700;
-            color: var(--lilac-600);
-        }
-        .hero-stat-label {
-            font-size: 0.8rem; color: var(--gray-600);
-            margin-top: 4px;
-        }
+        /* EXPERIENCE */
+        .experience { background:var(--white); }
+        .exp-timeline { position:relative;padding-left:32px;margin-top:48px; }
+        .exp-timeline::before { content:'';position:absolute;left:10px;top:8px;bottom:8px;width:2px;background:var(--lilac-200); }
+        .exp-item { margin-bottom:48px;position:relative; }
+        .exp-item:last-child { margin-bottom:0; }
+        .exp-item::before { content:'';position:absolute;left:-26px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--lilac-500);border:3px solid var(--lilac-100); }
+        .exp-header { display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:8px; }
+        .exp-role { font-family:var(--font-heading);font-size:1.2rem;font-weight:600;color:var(--gray-900); }
+        .exp-date { font-size:0.8rem;font-weight:600;color:var(--lilac-500);white-space:nowrap; }
+        .exp-company { font-size:0.95rem;font-weight:500;color:var(--lilac-600);margin-bottom:12px; }
+        .exp-bullets { list-style:none;padding:0; }
+        .exp-bullets li { font-size:0.92rem;color:var(--gray-600);line-height:1.65;margin-bottom:10px;padding-left:20px;position:relative; }
+        .exp-bullets li::before { content:'';position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--lilac-300); }
+        .exp-metric { font-weight:600;color:var(--lilac-600); }
 
-        /* ========== CREDENTIALS BAR ========== */
-        .credentials {
-            background: var(--gray-900);
-            padding: 28px 0;
-        }
-        .credentials-inner {
-            display: flex; align-items: center;
-            justify-content: center; gap: 48px; flex-wrap: wrap;
-        }
-        .credential-item {
-            display: flex; align-items: center; gap: 10px;
-            color: var(--gray-200); font-size: 0.9rem; font-weight: 500;
-        }
-        .credential-icon {
-            width: 32px; height: 32px; border-radius: 8px;
-            background: rgba(168,85,247,0.15);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 0.75rem; font-weight: 700; color: var(--lilac-300);
+        /* RESULTS */
+        .results { background:var(--lilac-50); }
+        .results-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px; }
+        .result-card { padding:28px;border-radius:16px;background:var(--white);border:1px solid var(--lilac-100);text-align:center;transition:all 0.3s; }
+        .result-card:hover { transform:translateY(-4px);box-shadow:0 12px 40px rgba(147,51,234,0.08); }
+        .result-metric { font-family:var(--font-heading);font-size:1.6rem;font-weight:700;color:var(--lilac-600);margin-bottom:4px; }
+        .result-card h3 { font-family:var(--font-heading);font-size:0.95rem;font-weight:600;color:var(--gray-900);margin-bottom:8px; }
+        .result-card p { font-size:0.82rem;color:var(--gray-600);line-height:1.6; }
+
+        /* EDUCATION */
+        .education { background:var(--white); }
+        .edu-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px; }
+        .edu-card { padding:32px 24px;border-radius:16px;background:var(--lilac-50);border:1px solid var(--lilac-100);text-align:center; }
+        .edu-degree { font-family:var(--font-heading);font-size:1.15rem;font-weight:600;color:var(--gray-900);margin-bottom:4px; }
+        .edu-field { font-size:0.9rem;color:var(--lilac-600);font-weight:500;margin-bottom:8px; }
+        .edu-school { font-size:0.85rem;color:var(--gray-600); }
+        .edu-gpa { font-size:0.8rem;font-weight:600;color:var(--lilac-500);margin-top:8px; }
+
+        /* CERTIFICATIONS */
+        .certs { background:var(--lilac-50); }
+        .certs-grid { display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:48px; }
+        .cert-card { display:flex;gap:16px;align-items:start;padding:24px;border-radius:14px;background:var(--white);border:1px solid var(--lilac-100); }
+        .cert-badge { width:44px;height:44px;border-radius:12px;background:var(--lilac-100);display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:700;color:var(--lilac-600);flex-shrink:0; }
+        .cert-name { font-weight:600;color:var(--gray-900);font-size:0.95rem;margin-bottom:2px; }
+        .cert-issuer { font-size:0.82rem;color:var(--gray-600); }
+
+        /* SPEAKING */
+        .speaking { background:var(--white); }
+        .speaking-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px; }
+        .speaking-card { padding:32px 24px;border-radius:16px;border:1px solid var(--gray-200);background:var(--white);transition:all 0.3s; }
+        .speaking-card:hover { border-color:var(--lilac-300);box-shadow:0 12px 40px rgba(147,51,234,0.08);transform:translateY(-4px); }
+        .speaking-card h3 { font-family:var(--font-heading);font-size:1.05rem;font-weight:600;color:var(--gray-900);margin-bottom:8px; }
+        .speaking-card p { font-size:0.88rem;color:var(--gray-600);line-height:1.6; }
+        .speaking-year { font-size:0.72rem;font-weight:600;color:var(--lilac-500);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px; }
+
+        /* COMMUNITY */
+        .community { background:var(--lilac-50); }
+        .community-grid { display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:48px; }
+        .community-card { padding:32px;border-radius:16px;background:var(--white);border:1px solid var(--lilac-100); }
+        .community-card h3 { font-family:var(--font-heading);font-size:1.1rem;font-weight:600;color:var(--gray-900);margin-bottom:4px; }
+        .community-role { font-size:0.85rem;font-weight:600;color:var(--lilac-500);margin-bottom:10px; }
+        .community-card p { font-size:0.92rem;color:var(--gray-600);line-height:1.65; }
+
+        /* TECH SKILLS */
+        .skills { background:var(--white); }
+        .skills-grid { display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:48px; }
+        .skill-group h3 { font-family:var(--font-heading);font-size:1.05rem;font-weight:600;color:var(--gray-900);margin-bottom:16px; }
+        .skill-pills { display:flex;flex-wrap:wrap;gap:10px; }
+        .skill-pill { font-size:0.82rem;font-weight:500;padding:8px 16px;border-radius:100px;background:var(--lilac-50);color:var(--lilac-700);border:1px solid var(--lilac-200);transition:all 0.2s; }
+        .skill-pill:hover { background:var(--lilac-600);color:var(--white);border-color:var(--lilac-600); }
+
+        /* CONTACT */
+        .contact { background:linear-gradient(160deg,var(--gray-900),#2d1b69);color:var(--white); }
+        .contact .section-label { color:var(--lilac-300); }
+        .contact .section-title { color:var(--white); }
+        .contact .section-subtitle { color:var(--gray-200); }
+        .contact-grid { display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:48px; }
+        .contact-form { display:flex;flex-direction:column;gap:20px; }
+        .form-group { display:flex;flex-direction:column;gap:6px; }
+        .form-group label { font-size:0.8rem;font-weight:500;color:var(--gray-200); }
+        .form-group input,.form-group textarea,.form-group select { padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.06);color:var(--white);font-family:var(--font-body);font-size:0.9rem;transition:border-color 0.2s; }
+        .form-group input::placeholder,.form-group textarea::placeholder { color:rgba(255,255,255,0.35); }
+        .form-group input:focus,.form-group textarea:focus,.form-group select:focus { outline:none;border-color:var(--lilac-400); }
+        .form-group textarea { resize:vertical;min-height:120px; }
+        .form-group select option { background:var(--gray-900);color:var(--white); }
+        .form-row { display:grid;grid-template-columns:1fr 1fr;gap:16px; }
+        .contact-info { display:flex;flex-direction:column;gap:28px; }
+        .contact-info-item { display:flex;gap:16px;align-items:start; }
+        .contact-info-icon { width:44px;height:44px;border-radius:12px;background:rgba(168,85,247,0.15);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0; }
+        .contact-info-label { font-size:0.8rem;color:var(--gray-200);margin-bottom:4px; }
+        .contact-info-value { font-size:1rem;font-weight:500; }
+        .contact-info-value a { color:var(--lilac-300);transition:color 0.2s; }
+        .contact-info-value a:hover { color:var(--lilac-200); }
+        .social-links { display:flex;gap:12px;margin-top:12px; }
+        .social-link { width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;transition:all 0.2s;border:1px solid rgba(255,255,255,0.1); }
+        .social-link:hover { background:var(--lilac-600);border-color:var(--lilac-500); }
+        .social-link svg { width:20px;height:20px;fill:var(--white); }
+
+        /* FOOTER */
+        .footer { background:var(--gray-900);padding:32px 0;border-top:1px solid rgba(255,255,255,0.06); }
+        .footer-inner { display:flex;justify-content:space-between;align-items:center;color:var(--gray-600);font-size:0.8rem; }
+
+        /* MOBILE */
+        @media (max-width:768px) {
+            .nav-links { display:none; }
+            .nav-cta-desktop { display:none; }
+            .hamburger { display:flex; }
+            .nav-links.active { display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--white);padding:24px;gap:20px;border-bottom:1px solid var(--gray-200);box-shadow:0 12px 24px rgba(0,0,0,0.06); }
+            .hero { padding:120px 0 64px; }
+            .hero-grid { grid-template-columns:1fr;gap:40px; }
+            .hero h1 { font-size:2.25rem; }
+            .hero-image { order:-1; }
+            .hero-visual { width:240px;height:240px; }
+            .hero-stats { gap:20px;flex-wrap:wrap; }
+            .credentials-inner { gap:20px; }
+            .services-grid,.speaking-grid,.edu-grid { grid-template-columns:1fr; }
+            .about-grid,.community-grid,.certs-grid,.skills-grid,.contact-grid,.results-grid { grid-template-columns:1fr;gap:32px; }
+            .form-row { grid-template-columns:1fr; }
+            .section-title { font-size:1.75rem; }
+            .section { padding:64px 0; }
+            .footer-inner { flex-direction:column;gap:12px;text-align:center; }
         }
 
-        /* ========== SERVICES ========== */
-        .services { background: var(--white); }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px; margin-top: 56px;
-        }
-        .service-card {
-            padding: 36px 28px;
-            border-radius: 16px;
-            border: 1px solid var(--gray-200);
-            background: var(--white);
-            transition: all 0.3s;
-            position: relative; overflow: hidden;
-        }
-        .service-card:hover {
-            border-color: var(--lilac-300);
-            box-shadow: 0 12px 40px rgba(147,51,234,0.08);
-            transform: translateY(-4px);
-        }
-        .service-card::before {
-            content: '';
-            position: absolute; top: 0; left: 0; right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--lilac-400), var(--lilac-600));
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .service-card:hover::before { opacity: 1; }
-        .service-icon {
-            width: 52px; height: 52px; border-radius: 14px;
-            background: var(--lilac-50);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.5rem; margin-bottom: 20px;
-        }
-        .service-card h3 {
-            font-family: var(--font-heading);
-            font-size: 1.2rem; font-weight: 600;
-            color: var(--gray-900); margin-bottom: 12px;
-        }
-        .service-card p {
-            font-size: 0.92rem; color: var(--gray-600);
-            line-height: 1.65;
-        }
-        .service-tags {
-            display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px;
-        }
-        .service-tag {
-            font-size: 0.72rem; font-weight: 500;
-            padding: 4px 12px; border-radius: 100px;
-            background: var(--lilac-50); color: var(--lilac-600);
-            border: 1px solid var(--lilac-100);
-        }
-
-        /* ========== ABOUT ========== */
-        .about { background: var(--lilac-50); }
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 72px; align-items: start; margin-top: 48px;
-        }
-        .about-text p {
-            font-size: 1rem; color: var(--gray-700);
-            margin-bottom: 20px;
-        }
-        .timeline { position: relative; padding-left: 28px; }
-        .timeline::before {
-            content: ''; position: absolute; left: 8px; top: 4px; bottom: 4px;
-            width: 2px; background: var(--lilac-200);
-        }
-        .timeline-item { margin-bottom: 28px; position: relative; }
-        .timeline-item::before {
-            content: ''; position: absolute; left: -24px; top: 6px;
-            width: 12px; height: 12px; border-radius: 50%;
-            background: var(--lilac-400);
-            border: 3px solid var(--lilac-100);
-        }
-        .timeline-date {
-            font-size: 0.75rem; font-weight: 600;
-            color: var(--lilac-500); text-transform: uppercase;
-            letter-spacing: 0.05em; margin-bottom: 4px;
-        }
-        .timeline-role {
-            font-weight: 600; color: var(--gray-900);
-            font-size: 0.95rem; margin-bottom: 2px;
-        }
-        .timeline-company {
-            font-size: 0.85rem; color: var(--gray-600);
-        }
-
-        /* ========== RESULTS ========== */
-        .results { background: var(--white); }
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 28px; margin-top: 48px;
-        }
-        .result-card {
-            padding: 32px;
-            border-radius: 16px;
-            background: linear-gradient(135deg, var(--lilac-50), var(--white));
-            border: 1px solid var(--lilac-100);
-        }
-        .result-card h3 {
-            font-family: var(--font-heading);
-            font-size: 1.1rem; font-weight: 600;
-            color: var(--gray-900); margin-bottom: 12px;
-        }
-        .result-card p {
-            font-size: 0.92rem; color: var(--gray-600);
-            line-height: 1.65;
-        }
-        .result-metric {
-            font-family: var(--font-heading);
-            font-size: 1.5rem; font-weight: 700;
-            color: var(--lilac-600); margin-bottom: 4px;
-        }
-
-        /* ========== CONTACT ========== */
-        .contact {
-            background: linear-gradient(160deg, var(--gray-900), #2d1b69);
-            color: var(--white);
-        }
-        .contact .section-label { color: var(--lilac-300); }
-        .contact .section-title { color: var(--white); }
-        .contact .section-subtitle { color: var(--gray-200); }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px; margin-top: 48px;
-        }
-        .contact-form { display: flex; flex-direction: column; gap: 20px; }
-        .form-group { display: flex; flex-direction: column; gap: 6px; }
-        .form-group label {
-            font-size: 0.8rem; font-weight: 500; color: var(--gray-200);
-        }
-        .form-group input, .form-group textarea, .form-group select {
-            padding: 12px 16px; border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.15);
-            background: rgba(255,255,255,0.06);
-            color: var(--white); font-family: var(--font-body);
-            font-size: 0.9rem; transition: border-color 0.2s;
-        }
-        .form-group input::placeholder, .form-group textarea::placeholder {
-            color: rgba(255,255,255,0.35);
-        }
-        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-            outline: none; border-color: var(--lilac-400);
-        }
-        .form-group textarea { resize: vertical; min-height: 120px; }
-        .form-group select option { background: var(--gray-900); color: var(--white); }
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-        .contact-info { display: flex; flex-direction: column; gap: 28px; }
-        .contact-info-item {
-            display: flex; gap: 16px; align-items: start;
-        }
-        .contact-info-icon {
-            width: 44px; height: 44px; border-radius: 12px;
-            background: rgba(168,85,247,0.15);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.1rem; flex-shrink: 0;
-        }
-        .contact-info-label {
-            font-size: 0.8rem; color: var(--gray-200);
-            margin-bottom: 4px;
-        }
-        .contact-info-value {
-            font-size: 1rem; font-weight: 500;
-        }
-        .contact-info-value a { color: var(--lilac-300); transition: color 0.2s; }
-        .contact-info-value a:hover { color: var(--lilac-200); }
-
-        .social-links {
-            display: flex; gap: 12px; margin-top: 12px;
-        }
-        .social-link {
-            width: 44px; height: 44px; border-radius: 12px;
-            background: rgba(255,255,255,0.08);
-            display: flex; align-items: center; justify-content: center;
-            transition: all 0.2s;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .social-link:hover {
-            background: var(--lilac-600);
-            border-color: var(--lilac-500);
-        }
-        .social-link svg { width: 20px; height: 20px; fill: var(--white); }
-
-        /* ========== FOOTER ========== */
-        .footer {
-            background: var(--gray-900);
-            padding: 32px 0;
-            border-top: 1px solid rgba(255,255,255,0.06);
-        }
-        .footer-inner {
-            display: flex; justify-content: space-between;
-            align-items: center; color: var(--gray-600);
-            font-size: 0.8rem;
-        }
-
-        /* ========== MOBILE ========== */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .nav-cta-desktop { display: none; }
-            .hamburger { display: flex; }
-
-            .nav-links.active {
-                display: flex; flex-direction: column;
-                position: absolute; top: 72px; left: 0; right: 0;
-                background: var(--white);
-                padding: 24px; gap: 20px;
-                border-bottom: 1px solid var(--gray-200);
-                box-shadow: 0 12px 24px rgba(0,0,0,0.06);
-            }
-
-            .hero { padding: 120px 0 64px; }
-            .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-            .hero h1 { font-size: 2.25rem; }
-            .hero-image { order: -1; }
-            .hero-visual { width: 240px; height: 240px; }
-            .hero-stats { gap: 24px; flex-wrap: wrap; }
-
-            .credentials-inner { gap: 24px; }
-
-            .services-grid { grid-template-columns: 1fr; }
-            .about-grid { grid-template-columns: 1fr; gap: 40px; }
-            .results-grid { grid-template-columns: 1fr; }
-            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-            .form-row { grid-template-columns: 1fr; }
-
-            .section-title { font-size: 1.75rem; }
-            .section { padding: 64px 0; }
-
-            .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
-        }
-
-        /* ========== ANIMATIONS ========== */
-        .fade-in {
-            opacity: 0; transform: translateY(24px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        /* ANIMATIONS */
+        .fade-in { opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease; }
+        .fade-in.visible { opacity:1;transform:translateY(0); }
     </style>
 </head>
 <body>
@@ -487,8 +217,10 @@
         <a href="#" class="nav-logo">Chioma<span>.</span></a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#results">Results</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#results">Impact</a></li>
+            <li><a href="#speaking">Speaking</a></li>
+            <li><a href="#community">Community</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <a href="#contact" class="nav-cta nav-cta-desktop">Work With Me</a>
@@ -507,24 +239,28 @@
                     <span class="hero-badge-dot"></span>
                     Available for freelance projects
                 </div>
-                <h1>I help organisations <span class="highlight">transform operations</span> through technology</h1>
-                <p class="hero-text">IT Project Manager, Digital Transformation Consultant, and Business Solutions Expert — turning complex processes into streamlined, scalable systems.</p>
+                <h1>Digital Transformation Leader &amp; <span class="highlight">Business Innovation</span> Consultant</h1>
+                <p class="hero-text">8+ years driving innovation in banking and smart infrastructure. From fintech platforms that generated &#8358;416M in new revenue to spearheading Nigeria's first smart free zone digitisation — I turn complex operations into scalable, digital-first systems.</p>
                 <div class="hero-actions">
                     <a href="#contact" class="btn-primary">Start a Conversation &rarr;</a>
                     <a href="#services" class="btn-outline">View Services</a>
                 </div>
                 <div class="hero-stats">
                     <div>
-                        <div class="hero-stat-number">10+</div>
-                        <div class="hero-stat-label">Years in Tech & Business</div>
+                        <div class="hero-stat-number">8+</div>
+                        <div class="hero-stat-label">Years in Tech &amp; Business</div>
                     </div>
                     <div>
-                        <div class="hero-stat-number">15+</div>
-                        <div class="hero-stat-label">Modules Delivered</div>
+                        <div class="hero-stat-number">121%</div>
+                        <div class="hero-stat-label">Digital Payment Growth</div>
                     </div>
                     <div>
-                        <div class="hero-stat-number">20+</div>
-                        <div class="hero-stat-label">Team Members Led</div>
+                        <div class="hero-stat-number">30%</div>
+                        <div class="hero-stat-label">Cycle Time Reduction</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-number">$1M</div>
+                        <div class="hero-stat-label">Cost Savings Delivered</div>
                     </div>
                 </div>
             </div>
@@ -547,15 +283,19 @@
             </div>
             <div class="credential-item">
                 <div class="credential-icon">PSPO</div>
-                <span>Professional Scrum Product Owner</span>
+                <span>PSPO-I &mdash; Scrum.org</span>
             </div>
             <div class="credential-item">
                 <div class="credential-icon">MBA</div>
-                <span>MBA, Nexford University</span>
+                <span>MBA &mdash; Nexford</span>
             </div>
             <div class="credential-item">
-                <div class="credential-icon">Masters</div>
-                <span>MIT, University of Lagos</span>
+                <div class="credential-icon">CISL</div>
+                <span>Cambridge Sustainability</span>
+            </div>
+            <div class="credential-item">
+                <div class="credential-icon">EPFL</div>
+                <span>Smart Cities &mdash; EPFL</span>
             </div>
         </div>
     </div>
@@ -566,8 +306,7 @@
     <div class="container">
         <div class="section-label">What I Do</div>
         <h2 class="section-title">Services</h2>
-        <p class="section-subtitle">End-to-end support from strategy through execution — whether you need a consultant for a quarter or a hands-on project lead for a full engagement.</p>
-
+        <p class="section-subtitle">End-to-end support from strategy through execution &mdash; whether you need a consultant for a focused sprint or a hands-on project lead for a full engagement.</p>
         <div class="services-grid">
             <div class="service-card fade-in">
                 <div class="service-icon">&#9881;</div>
@@ -575,58 +314,58 @@
                 <p>Guiding organisations from paper-based and legacy workflows to modern, automated digital systems. I assess your current state, design the roadmap, and manage the execution.</p>
                 <div class="service-tags">
                     <span class="service-tag">Process Automation</span>
-                    <span class="service-tag">Paperless Systems</span>
+                    <span class="service-tag">Cloud Migration</span>
                     <span class="service-tag">Change Management</span>
                 </div>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon">&#128202;</div>
                 <h3>IT Project Management</h3>
-                <p>End-to-end project leadership — from scoping and stakeholder alignment through delivery. I keep timelines tight, budgets on track, and teams focused on outcomes.</p>
+                <p>End-to-end project leadership &mdash; from scoping and stakeholder alignment through delivery. Tight timelines, controlled budgets, teams focused on outcomes.</p>
                 <div class="service-tags">
                     <span class="service-tag">Agile / Scrum</span>
-                    <span class="service-tag">Stakeholder Mgmt</span>
+                    <span class="service-tag">Vendor Management</span>
                     <span class="service-tag">Risk Mitigation</span>
                 </div>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon">&#128161;</div>
-                <h3>Business &amp; Product Strategy</h3>
-                <p>Translating business needs into technology solutions. I work with your team to define product vision, gather requirements, and build what matters most.</p>
+                <h3>Product Strategy &amp; Fintech</h3>
+                <p>Translating business needs into technology solutions. From payment platform P&amp;L ownership to user journey optimisation &mdash; I build products that move metrics.</p>
                 <div class="service-tags">
                     <span class="service-tag">Product Management</span>
-                    <span class="service-tag">Business Analysis</span>
-                    <span class="service-tag">Requirements</span>
+                    <span class="service-tag">Fintech</span>
+                    <span class="service-tag">Revenue Growth</span>
                 </div>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon">&#127891;</div>
-                <h3>Training &amp; Facilitation</h3>
-                <p>Interactive workshops and hands-on training to upskill your team in Agile practices, digital tools, and process thinking. I make complex ideas accessible.</p>
+                <h3>AI &amp; Digital Upskilling</h3>
+                <p>Designing and facilitating workshops that increase AI-tool adoption, digital literacy, and productivity. Proven results: 10% to 40% AI adoption in 3 months.</p>
                 <div class="service-tags">
-                    <span class="service-tag">Workshops</span>
-                    <span class="service-tag">Agile Coaching</span>
-                    <span class="service-tag">L&amp;D Design</span>
+                    <span class="service-tag">AI Workshops</span>
+                    <span class="service-tag">Team Training</span>
+                    <span class="service-tag">Adoption Strategy</span>
                 </div>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon">&#128736;</div>
                 <h3>Process Optimisation</h3>
-                <p>Mapping your existing workflows, identifying bottlenecks, and redesigning processes for speed, accuracy, and scale. Data-driven improvements, not guesswork.</p>
+                <p>Mapping existing workflows, identifying bottlenecks, and redesigning processes for speed, accuracy, and scale. Data-driven improvements backed by analytics.</p>
                 <div class="service-tags">
                     <span class="service-tag">Workflow Design</span>
-                    <span class="service-tag">Bottleneck Analysis</span>
+                    <span class="service-tag">Data Analytics</span>
                     <span class="service-tag">KPI Tracking</span>
                 </div>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon">&#128640;</div>
-                <h3>Portal &amp; Module Development</h3>
-                <p>Overseeing the design, development, and launch of custom portals and software modules — from UX research to go-live, with cross-functional team coordination.</p>
+                <h3>Smart Infrastructure &amp; Sustainability</h3>
+                <p>Building ESG portals, sustainability data systems, and smart infrastructure solutions. Cambridge-certified in Business Sustainability Management.</p>
                 <div class="service-tags">
-                    <span class="service-tag">Portal Design</span>
-                    <span class="service-tag">Module Delivery</span>
-                    <span class="service-tag">UAT &amp; Launch</span>
+                    <span class="service-tag">ESG Portals</span>
+                    <span class="service-tag">Smart Cities</span>
+                    <span class="service-tag">Sustainability</span>
                 </div>
             </div>
         </div>
@@ -637,43 +376,99 @@
 <section class="about section" id="about">
     <div class="container">
         <div class="section-label">About Me</div>
-        <h2 class="section-title">The short version</h2>
+        <h2 class="section-title">My story</h2>
         <div class="about-grid">
             <div class="about-text">
-                <p>I'm Chioma Opara — an IT Project Manager and Digital Transformation Consultant with over a decade of experience spanning fintech, free trade zones, and enterprise operations.</p>
-                <p>Most recently, I've been leading the IT function at Lagos Free Zone (Tolaram), where I drove the shift from paper-based processes to fully digital, automated systems. I've directed the delivery of a 10-module sustainability portal, led cross-functional teams of 20+ people, and partnered across departments to turn operational bottlenecks into streamlined workflows.</p>
-                <p>Before that, I spent several years in banking — at Guaranty Trust Bank — building products, managing channels, and ensuring quality across technology delivery.</p>
-                <p>I hold an MBA from Nexford University, a Master's in IT from the University of Lagos, and carry PMP&reg; and PSPO certifications. I bring the rare combination of strategic thinking and hands-on execution that complex projects demand.</p>
+                <p>I'm Chioma Opara &mdash; a Digital Transformation Leader with 8+ years of experience driving innovation across banking, fintech, and smart infrastructure.</p>
+                <p>My career began in retail banking at Guaranty Trust Bank, where I managed 1,000+ client accounts and turned a struggling team's balance sheet positive within three months. I moved into product marketing and owned the P&amp;L for GTCollections, the bank's bill payment platform &mdash; growing annual digital payment revenue by 121% (from &#8358;333M to &#8358;737M) and launching integrations that generated &#8358;416M in additional revenue.</p>
+                <p>From banking, I transitioned into quality assurance, implementing automated testing that cut post-release defects by 30%. Then I took on my current role at Lagos Free Zone (Tolaram), where I lead technology initiatives for Nigeria's first smart free zone &mdash; automating 5 key manual workflows, delivering a 10-module Sustainability Portal for real-time ESG tracking, and managing a &pound;250K vendor portfolio.</p>
+                <p>Along the way, I founded <strong>Moms in Project Management (MiPM)</strong>, a nonprofit equipping mothers to transition into project-management careers. I'm also passionate about AI adoption &mdash; I've designed and delivered workshops for 200+ employees, boosting workplace AI-tool usage from 10% to 40% in just 3 months.</p>
             </div>
             <div>
-                <h3 style="font-family:var(--font-heading);font-size:1.2rem;font-weight:600;margin-bottom:24px;color:var(--gray-900);">Career Timeline</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">2023 &mdash; Present</div>
-                        <div class="timeline-role">IT Project Manager</div>
-                        <div class="timeline-company">Lagos Free Zone (Tolaram)</div>
+                <h3 style="font-family:var(--font-heading);font-size:1.2rem;font-weight:600;margin-bottom:24px;color:var(--gray-900);">Education</h3>
+                <div class="edu-grid" style="grid-template-columns:1fr;gap:16px;margin-top:0;">
+                    <div class="edu-card">
+                        <div class="edu-degree">MBA</div>
+                        <div class="edu-field">Master of Business Administration</div>
+                        <div class="edu-school">Nexford University, Washington DC (2024)</div>
+                        
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Previous</div>
-                        <div class="timeline-role">Product Manager, Channel Payments &amp; SME Solutions</div>
-                        <div class="timeline-company">Guaranty Trust Bank</div>
+                    <div class="edu-card">
+                        <div class="edu-degree">MIT</div>
+                        <div class="edu-field">Information Technology</div>
+                        <div class="edu-school">University of Lagos, Nigeria (2016)</div>
+                        
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Previous</div>
-                        <div class="timeline-role">IT QA Officer</div>
-                        <div class="timeline-company">Guaranty Trust Bank</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2022 &mdash; 2024</div>
-                        <div class="timeline-role">MBA</div>
-                        <div class="timeline-company">Nexford University</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Earlier</div>
-                        <div class="timeline-role">Master of Information Technology</div>
-                        <div class="timeline-company">University of Lagos</div>
+                    <div class="edu-card">
+                        <div class="edu-degree">B.Sc.</div>
+                        <div class="edu-field">Computer Science</div>
+                        <div class="edu-school">Madonna University, Nigeria (2011)</div>
+                        
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience section" id="experience">
+    <div class="container">
+        <div class="section-label">Career</div>
+        <h2 class="section-title">Professional experience</h2>
+        <div class="exp-timeline">
+
+            <div class="exp-item fade-in">
+                <div class="exp-header">
+                    <div class="exp-role">IT Project Manager</div>
+                    <div class="exp-date">Jan 2023 &mdash; Present</div>
+                </div>
+                <div class="exp-company">Lagos Free Zone (Tolaram)</div>
+                <ul class="exp-bullets">
+                    <li>Lead technology initiatives for <span class="exp-metric">Nigeria's first smart free zone</span>, driving enterprise-wide digital transformation across core operations.</li>
+                    <li>Automated <span class="exp-metric">5 key manual workflows</span> (HR, procurement, sustainability, facility management, operations), <span class="exp-metric">reducing approval cycle times by ~30%</span>.</li>
+                    <li>Steered development of a <span class="exp-metric">10-module Sustainability Portal</span>, enabling real-time ESG data capture for 10+ tenant companies.</li>
+                    <li>Managed a <span class="exp-metric">&pound;250K vendor portfolio</span> &mdash; negotiated contracts, tracked KPIs, achieved <span class="exp-metric">~15% cost savings</span> through vendor consolidation.</li>
+                    <li>Led a <span class="exp-metric">9-session AI familiarisation programme for 200+ employees</span>, boosting digital collaboration skills with a <span class="exp-metric">4.8/5 average feedback score</span>.</li>
+                    <li>Oversaw a smooth migration of enterprise systems to <span class="exp-metric">Azure cloud with zero downtime</span>.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item fade-in">
+                <div class="exp-header">
+                    <div class="exp-role">Software Quality Assurance Tester</div>
+                    <div class="exp-date">Feb 2022 &mdash; Jan 2023</div>
+                </div>
+                <div class="exp-company">Guaranty Trust Bank PLC</div>
+                <ul class="exp-bullets">
+                    <li>Implemented automated testing for the bank's internet banking suite, <span class="exp-metric">cutting post-release defects by 30%</span> and improving software reliability.</li>
+                    <li>Authored <span class="exp-metric">100+ test cases</span> and coordinated comprehensive UAT with business stakeholders.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item fade-in">
+                <div class="exp-header">
+                    <div class="exp-role">Product Marketing Manager</div>
+                    <div class="exp-date">Mar 2019 &mdash; Jan 2022</div>
+                </div>
+                <div class="exp-company">Guaranty Trust Bank PLC</div>
+                <ul class="exp-bullets">
+                    <li>Owned Bill Payment Platform (GTCollections) P&amp;L, driving strategy that <span class="exp-metric">grew annual digital payment revenue from &#8358;333M to &#8358;737M (+121%)</span>.</li>
+                    <li>Revamped platform UI and customer journey, <span class="exp-metric">boosting monthly active users by ~30%</span> and <span class="exp-metric">increasing transaction value 83% (&#8358;131B to &#8358;240B)</span>.</li>
+                    <li>Launched third-party biller integration generating <span class="exp-metric">&#8358;416M in additional revenue</span> by Dec 2021.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item fade-in">
+                <div class="exp-header">
+                    <div class="exp-role">Retail Banking Officer</div>
+                    <div class="exp-date">Apr 2016 &mdash; Mar 2019</div>
+                </div>
+                <div class="exp-company">Guaranty Trust Bank PLC</div>
+                <ul class="exp-bullets">
+                    <li>Managed a portfolio of <span class="exp-metric">1,000+ individual and 200+ SME accounts</span>, consistently surpassing annual deposit targets by ~15%.</li>
+                    <li>Mentored a team of 3, driving the team from negative balance sheet to <span class="exp-metric">over &#8358;2M in PBT in 3 months</span>.</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -683,29 +478,175 @@
 <section class="results section" id="results">
     <div class="container">
         <div class="section-label">Impact</div>
-        <h2 class="section-title">What I've delivered</h2>
-        <p class="section-subtitle">A selection of outcomes from recent work. Names withheld where confidentiality applies.</p>
-
+        <h2 class="section-title">Numbers that matter</h2>
+        <p class="section-subtitle">Measurable outcomes from real projects across banking, fintech, and smart infrastructure.</p>
         <div class="results-grid">
             <div class="result-card fade-in">
-                <div class="result-metric">10 Modules</div>
-                <h3>Sustainability Portal</h3>
-                <p>Directed the full lifecycle — from requirements and UX design through development and launch — of a sustainability department portal comprising 10 integrated modules.</p>
+                <div class="result-metric">121%</div>
+                <h3>Revenue Growth</h3>
+                <p>Digital payment revenue from &#8358;333M to &#8358;737M on GTCollections platform.</p>
             </div>
             <div class="result-card fade-in">
-                <div class="result-metric">Paper &rarr; Digital</div>
-                <h3>Enterprise-Wide Paperless Transition</h3>
-                <p>Led the organisation's shift from manual, paper-based processes to automated digital workflows across multiple business units, improving speed and reducing errors.</p>
+                <div class="result-metric">&#8358;416M</div>
+                <h3>New Revenue</h3>
+                <p>Generated through third-party biller integrations on the payment platform.</p>
             </div>
             <div class="result-card fade-in">
-                <div class="result-metric">20+ People</div>
-                <h3>Cross-Functional Team Leadership</h3>
-                <p>Built and managed a cross-functional team of developers, designers, testers, and analysts to deliver technology solutions aligned with business objectives.</p>
+                <div class="result-metric">~$1M</div>
+                <h3>Cost Savings</h3>
+                <p>Predictive analytics to identify and correct transaction fee anomalies in Card Scheme fees.</p>
             </div>
             <div class="result-card fade-in">
-                <div class="result-metric">Optimised</div>
-                <h3>Operational Workflow Redesign</h3>
-                <p>Partnered with business units to map operational workflows, identify bottlenecks, and implement practical improvements that reduced cycle times and improved accuracy.</p>
+                <div class="result-metric">~30%</div>
+                <h3>Cycle Time Reduction</h3>
+                <p>Automated 5 key workflows across HR, procurement, sustainability, and operations.</p>
+            </div>
+            <div class="result-card fade-in">
+                <div class="result-metric">10% &rarr; 40%</div>
+                <h3>AI Adoption</h3>
+                <p>Workplace AI-tool usage increased 4x within 3 months through structured workshops.</p>
+            </div>
+            <div class="result-card fade-in">
+                <div class="result-metric">83%</div>
+                <h3>Transaction Value Growth</h3>
+                <p>Platform transaction value from &#8358;131B to &#8358;240B over two years.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="certs section" id="certifications">
+    <div class="container">
+        <div class="section-label">Credentials</div>
+        <h2 class="section-title">Certifications</h2>
+        <div class="certs-grid">
+            <div class="cert-card fade-in">
+                <div class="cert-badge">PMP</div>
+                <div>
+                    <div class="cert-name">Project Management Professional (PMP&reg;)</div>
+                    <div class="cert-issuer">Project Management Institute (PMI) &mdash; Valid through 2027</div>
+                </div>
+            </div>
+            <div class="cert-card fade-in">
+                <div class="cert-badge">PSPO</div>
+                <div>
+                    <div class="cert-name">Professional Scrum Product Owner I (PSPO-I)</div>
+                    <div class="cert-issuer">Scrum.org</div>
+                </div>
+            </div>
+            <div class="cert-card fade-in">
+                <div class="cert-badge">CISL</div>
+                <div>
+                    <div class="cert-name">Business Sustainability Management</div>
+                    <div class="cert-issuer">Cambridge Institute for Sustainability Leadership (University of Cambridge), 2025</div>
+                </div>
+            </div>
+            <div class="cert-card fade-in">
+                <div class="cert-badge">EPFL</div>
+                <div>
+                    <div class="cert-name">Smart Cities &mdash; Management of Smart Urban Infrastructure</div>
+                    <div class="cert-issuer">&Eacute;cole Polytechnique F&eacute;d&eacute;rale de Lausanne (EPFL), 2024</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SPEAKING -->
+<section class="speaking section" id="speaking">
+    <div class="container">
+        <div class="section-label">Thought Leadership</div>
+        <h2 class="section-title">Speaking &amp; facilitation</h2>
+        <div class="speaking-grid">
+            <div class="speaking-card fade-in">
+                <div class="speaking-year">2025</div>
+                <h3>AI Productivity Workshop</h3>
+                <p>Lead Facilitator &mdash; Organisation-wide workshop at Lagos Free Zone for 100+ staff, demonstrating practical uses of AI tools to improve productivity.</p>
+            </div>
+            <div class="speaking-card fade-in">
+                <div class="speaking-year">2025</div>
+                <h3>Digitalization &amp; Workplace Safety</h3>
+                <p>Panelist, World Safety Day &mdash; Discussing the impact of digital transformation on workplace health and safety, and implementing smart tech for safer work environments.</p>
+            </div>
+            <div class="speaking-card fade-in">
+                <div class="speaking-year">2025</div>
+                <h3>Tech Career Mentorship</h3>
+                <p>Mentor &mdash; Advising high school students and early-career professionals globally on IT project management career paths and skills development.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="community section" id="community">
+    <div class="container">
+        <div class="section-label">Giving Back</div>
+        <h2 class="section-title">Community &amp; volunteering</h2>
+        <div class="community-grid">
+            <div class="community-card fade-in">
+                <h3>Moms in Project Management (MiPM)</h3>
+                <div class="community-role">Founder &amp; Executive Director &mdash; 2025&ndash;Present</div>
+                <p>Launched a nonprofit community that equips mothers to transition into project-management careers through mentorship, skills bootcamps, and scholarship advocacy.</p>
+            </div>
+            <div class="community-card fade-in">
+                <h3>STEM Mentoring</h3>
+                <div class="community-role">Volunteer Mentor &mdash; Gbara &amp; Olomu Community Schools, 2025</div>
+                <p>Led career guidance and personal development sessions for high school students, inspiring future careers in technology and STEM fields.</p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- TECHNICAL SKILLS -->
+<section class="skills section" id="skills">
+    <div class="container">
+        <div class="section-label">Toolkit</div>
+        <h2 class="section-title">Technical skills</h2>
+        <div class="skills-grid">
+            <div class="skill-group fade-in">
+                <h3>Project &amp; Agile Tools</h3>
+                <div class="skill-pills">
+                    <span class="skill-pill">Jira</span>
+                    <span class="skill-pill">Trello</span>
+                    <span class="skill-pill">Asana</span>
+                    <span class="skill-pill">Azure DevOps</span>
+                    <span class="skill-pill">Microsoft 365</span>
+                    <span class="skill-pill">SharePoint</span>
+                    <span class="skill-pill">Teams</span>
+                </div>
+            </div>
+            <div class="skill-group fade-in">
+                <h3>Programming &amp; Data</h3>
+                <div class="skill-pills">
+                    <span class="skill-pill">SQL</span>
+                    <span class="skill-pill">Power BI</span>
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">Advanced Excel</span>
+                </div>
+            </div>
+            <div class="skill-group fade-in">
+                <h3>AI &amp; Automation</h3>
+                <div class="skill-pills">
+                    <span class="skill-pill">ChatGPT</span>
+                    <span class="skill-pill">Claude</span>
+                    <span class="skill-pill">Gemini</span>
+                    <span class="skill-pill">Microsoft Copilot</span>
+                    <span class="skill-pill">Power Apps</span>
+                    <span class="skill-pill">Power Automate</span>
+                </div>
+            </div>
+            <div class="skill-group fade-in">
+                <h3>Core Competencies</h3>
+                <div class="skill-pills">
+                    <span class="skill-pill">Digital Transformation</span>
+                    <span class="skill-pill">Agile / Scrum</span>
+                    <span class="skill-pill">Product Management</span>
+                    <span class="skill-pill">Stakeholder Engagement</span>
+                    <span class="skill-pill">Business Analysis</span>
+                    <span class="skill-pill">Cloud Migration</span>
+                </div>
             </div>
         </div>
     </div>
@@ -717,7 +658,6 @@
         <div class="section-label">Get in Touch</div>
         <h2 class="section-title">Let's work together</h2>
         <p class="section-subtitle">Have a project in mind? I'd love to hear about it. Fill out the form or reach out directly.</p>
-
         <div class="contact-grid">
             <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
                 <div class="form-row">
@@ -736,10 +676,10 @@
                         <option value="">Select a service...</option>
                         <option value="digital-transformation">Digital Transformation</option>
                         <option value="project-management">IT Project Management</option>
-                        <option value="product-strategy">Business & Product Strategy</option>
-                        <option value="training">Training & Facilitation</option>
+                        <option value="product-strategy">Product Strategy & Fintech</option>
+                        <option value="ai-upskilling">AI & Digital Upskilling</option>
                         <option value="process-optimisation">Process Optimisation</option>
-                        <option value="portal-development">Portal & Module Development</option>
+                        <option value="sustainability">Smart Infrastructure & Sustainability</option>
                         <option value="other">Other</option>
                     </select>
                 </div>
@@ -749,15 +689,21 @@
                 </div>
                 <button type="submit" class="btn-primary" style="align-self:flex-start;">Send Message &rarr;</button>
             </form>
-
             <div class="contact-info">
                 <div class="contact-info-item">
                     <div class="contact-info-icon">&#9993;</div>
                     <div>
                         <div class="contact-info-label">Email</div>
                         <div class="contact-info-value">
-                            <a href="mailto:oparachiomarosemary@gmail.com">oparachiomarosemary@gmail.com</a>
+                            <a href="mailto:mrschiomaopara@gmail.com">mrschiomaopara@gmail.com</a>
                         </div>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">&#128222;</div>
+                    <div>
+                        <div class="contact-info-label">Phone</div>
+                        <div class="contact-info-value">+234 806 017 6821</div>
                     </div>
                 </div>
                 <div class="contact-info-item">
@@ -785,7 +731,6 @@
                         <div class="contact-info-value">Lagos, Nigeria</div>
                     </div>
                 </div>
-
                 <div>
                     <div class="contact-info-label" style="margin-bottom:12px;">Follow me</div>
                     <div class="social-links">
@@ -813,43 +758,25 @@
 </footer>
 
 <script>
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile menu
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => navLinks.classList.remove('active'));
-    });
-
-    // Fade-in on scroll
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-    // Contact form
     function handleSubmit(e) {
         e.preventDefault();
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const service = document.getElementById('service').value;
         const message = document.getElementById('message').value;
-
-        // Build mailto link as a simple fallback
         const subject = encodeURIComponent(`Freelance Inquiry: ${service || 'General'}`);
         const body = encodeURIComponent(`Hi Chioma,\n\nMy name is ${name}.\n\n${message}\n\nService: ${service}\nEmail: ${email}`);
-        window.location.href = `mailto:oparachiomarosemary@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:mrschiomaopara@gmail.com?subject=${subject}&body=${body}`;
     }
 </script>
-
 </body>
 </html>
